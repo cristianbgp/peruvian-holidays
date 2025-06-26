@@ -14,7 +14,8 @@ type IsHoliday = {
 };
 
 function formatDate(dateIsoString: string) {
-  return new Date(dateIsoString).toLocaleDateString();
+  const date = new Date(dateIsoString);
+  return date.toLocaleDateString('es-PE', { timeZone: 'America/Lima' });
 }
 
 function App() {
